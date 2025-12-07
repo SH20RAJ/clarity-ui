@@ -1,0 +1,14 @@
+{
+  "name": "command",
+  "type": "registry:ui",
+  "dependencies": [
+    "cmdk"
+  ],
+  "files": [
+    {
+      "path": "ui/command.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/command.tsx"
+    }
+  ]
+}

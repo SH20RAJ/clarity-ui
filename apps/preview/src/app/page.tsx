@@ -1,4 +1,4 @@
-import { Button } from "clarityui";
+import { Button, Input, Card, Badge, Toggle, Slider, Switch, Separator } from "clarityui";
 
 export default function Home() {
     return (
@@ -17,7 +17,7 @@ export default function Home() {
                         </button>
                     ))}
                     <div className="pt-4 pb-2 px-2 text-xs font-semibold text-neutral-400 uppercase tracking-wider">Components</div>
-                    {["Button", "Card", "Input", "Badge"].map((item) => (
+                    {["Button", "Card", "Input", "Badge", "Slider", "Switch"].map((item) => (
                         <button key={item} className="w-full text-left px-2 py-1.5 text-sm font-medium text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-colors dark:text-neutral-400 dark:hover:text-neutral-100 dark:hover:bg-neutral-800/50">
                             {item}
                         </button>
@@ -42,19 +42,49 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="border border-neutral-200/60 dark:border-neutral-800 rounded-xl p-12 flex items-center justify-center gap-4 bg-white dark:bg-neutral-900/50 shadow-sm min-h-[300px]">
-                        <div className="flex flex-col items-center gap-4">
-                            <div className="flex gap-4">
-                                <Button>Primary Button</Button>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Buttons Card */}
+                        <div className="border border-neutral-200/60 dark:border-neutral-800 rounded-xl p-8 bg-white dark:bg-neutral-900/50 shadow-sm">
+                            <h3 className="font-semibold mb-4">Buttons</h3>
+                            <div className="flex flex-wrap gap-4">
+                                <Button>Primary</Button>
                                 <Button variant="secondary">Secondary</Button>
                                 <Button variant="outline">Outline</Button>
-                            </div>
-                            <div className="flex gap-4">
                                 <Button variant="destructive">Destructive</Button>
                                 <Button variant="ghost">Ghost</Button>
-                                <Button variant="link">Link</Button>
                             </div>
-                            <span className="text-xs text-neutral-400 mt-4">More components coming soon...</span>
+                        </div>
+
+                        {/* Inputs Card */}
+                        <div className="border border-neutral-200/60 dark:border-neutral-800 rounded-xl p-8 bg-white dark:bg-neutral-900/50 shadow-sm">
+                            <h3 className="font-semibold mb-4">Inputs & Badges</h3>
+                            <div className="space-y-4">
+                                <Input placeholder="Email address" />
+                                <div className="flex gap-2">
+                                    <Badge>New</Badge>
+                                    <Badge variant="secondary">Secondary</Badge>
+                                    <Badge variant="outline">Outline</Badge>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Interactive Card */}
+                        <div className="border border-neutral-200/60 dark:border-neutral-800 rounded-xl p-8 bg-white dark:bg-neutral-900/50 shadow-sm col-span-1 md:col-span-2">
+                            <h3 className="font-semibold mb-4">Interactive</h3>
+                            <div className="flex items-center gap-8">
+                                <div className="flex items-center gap-2">
+                                    <Switch id="airplane-mode" />
+                                    <label htmlFor="airplane-mode" className="text-sm font-medium">Airplane Mode</label>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <Toggle aria-label="Toggle italic">
+                                        B
+                                    </Toggle>
+                                </div>
+                                <div className="w-1/2">
+                                    <Slider defaultValue={[33]} max={100} step={1} />
+                                </div>
+                            </div>
                         </div>
                     </div>
 

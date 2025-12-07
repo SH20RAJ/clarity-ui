@@ -1,15 +1,14 @@
 {
-  "name": "button",
+  "name": "badge",
   "type": "registry:ui",
   "dependencies": [
-    "@radix-ui/react-slot",
     "class-variance-authority"
   ],
   "files": [
     {
-      "path": "ui/button.tsx",
+      "path": "ui/badge.tsx",
       "type": "registry:ui",
-      "target": "components/ui/button.tsx"
+      "target": "components/ui/badge.tsx"
     }
   ]
 }

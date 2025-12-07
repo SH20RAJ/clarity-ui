@@ -1,0 +1,12 @@
+{
+  "name": "textarea",
+  "type": "registry:ui",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "ui/textarea.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/textarea.tsx"
+    }
+  ]
+}

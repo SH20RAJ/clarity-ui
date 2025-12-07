@@ -1,0 +1,14 @@
+{
+  "name": "dropdown-menu",
+  "type": "registry:ui",
+  "dependencies": [
+    "@radix-ui/react-dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "ui/dropdown-menu.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/dropdown-menu.tsx"
+    }
+  ]
+}
