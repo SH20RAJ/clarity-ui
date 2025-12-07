@@ -1,11 +1,13 @@
 # Clarity UI
 
-![NPM Version](https://img.shields.io/npm/v/clarityui)
+![NPM Version](https://img.shields.io/npm/v/clarityui?logo=npm)
 ![License](https://img.shields.io/npm/l/clarityui)
 ![Build Status](https://github.com/sh20raj/clarity-ui/actions/workflows/ci.yml/badge.svg)
-![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=sh20raj.clarity-ui)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fsh20raj%2Fclarity-ui&countColor=%23263759)
 
-**Clarity UI** is a clean, minimal, and premium component library built on top of [Radix UI](https://www.radix-ui.com/) and [Tailwind CSS](https://tailwindcss.com/). It is designed to be copy-paste friendly and fully compatible with [shadcn/ui](https://ui.shadcn.com/).
+[Live Demo](https://clarity-ui.pages.dev) | [Documentation](https://clarity-ui.pages.dev)
+
+Clean, modern, and accessible React components for building high-quality web applications. Built on top of [Radix UI](https://www.radix-ui.com/) and [Tailwind CSS](https://tailwindcss.com/). It is designed to be copy-paste friendly and fully compatible with [shadcn/ui](https://ui.shadcn.com/).
 
 ## Features
 
