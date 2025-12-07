@@ -12,6 +12,7 @@ import * as ClarityUI from "clarityui"
 import { ComponentPreview } from "@/components/component-preview"
 import { ErrorBoundary } from "@/components/ui/error-boundary"
 import { ClientOnly } from "@/components/client-only"
+import { Pre } from "@/components/pre"
 import { getAllDocsSlugs } from "@/lib/docs"
 
 const components = {
@@ -19,6 +20,7 @@ const components = {
     ComponentPreview,
     ErrorBoundary,
     ClientOnly,
+    pre: Pre,
 }
 
 interface PageProps {

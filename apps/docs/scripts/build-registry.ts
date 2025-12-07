@@ -11,6 +11,11 @@ if (!fs.existsSync(registryDir)) {
 
 const files = fs.readdirSync(componentsDir).filter(f => f.endsWith(".tsx"))
 
+const rDir = path.join(process.cwd(), "public/r")
+
+if (!fs.existsSync(registryDir)) fs.mkdirSync(registryDir, { recursive: true })
+if (!fs.existsSync(rDir)) fs.mkdirSync(rDir, { recursive: true })
+
 files.forEach(file => {
     const name = file.replace(".tsx", "")
     const content = fs.readFileSync(path.join(componentsDir, file), "utf-8")
@@ -33,5 +38,6 @@ files.forEach(file => {
     }
 
     fs.writeFileSync(path.join(registryDir, `${name}.json`), JSON.stringify(registryItem, null, 2))
-    console.log(`Generated registry/${name}.json`)
+    fs.writeFileSync(path.join(rDir, `${name}.json`), JSON.stringify(registryItem, null, 2))
+    console.log(`Generated registry/${name}.json and r/${name}.json`)
 })

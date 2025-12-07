@@ -2,13 +2,13 @@
   "name": "aspect-ratio",
   "type": "registry:ui",
   "dependencies": [
-    "@radix-ui/react-aspect-ratio"
+    "clarityui"
   ],
   "files": [
     {
       "path": "ui/aspect-ratio.tsx",
-      "type": "registry:ui",
-      "target": "components/ui/aspect-ratio.tsx"
+      "content": "import * as AspectRatioPrimitive from \"@radix-ui/react-aspect-ratio\"\n\nconst AspectRatio = AspectRatioPrimitive.Root\n\nexport { AspectRatio }\n",
+      "type": "registry:ui"
     }
   ]
 }
