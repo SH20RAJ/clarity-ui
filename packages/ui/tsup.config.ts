@@ -9,6 +9,9 @@ export default defineConfig({
     noExternal: Object.keys(packageJson.dependencies || {}).filter(
         (dep) => !["react-hook-form"].includes(dep)
     ),
+    banner: {
+        js: '"use client";',
+    },
     sourcemap: true,
     minify: false,
 });

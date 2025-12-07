@@ -1,45 +1,105 @@
-
+import Link from "next/link";
+import { Button } from "clarityui"; // We can use the library components!
+import { ArrowRight, Github, Zap, Layout, FileCode } from "lucide-react";
 
 export default function Home() {
     return (
-        <div className="flex min-h-screen w-full bg-[#fcfcfc] text-neutral-900 dark:bg-neutral-950 dark:text-neutral-50 font-sans selection:bg-neutral-200 dark:selection:bg-neutral-800">
-
-            {/* Sidebar / Navigation */}
-            <aside className="hidden w-64 border-r border-neutral-200/50 bg-[#fbfbfb] dark:border-neutral-800 dark:bg-neutral-900/50 lg:block fixed h-full inset-y-0 left-0 p-6">
-                <div className="flex items-center gap-2 mb-8 px-2">
-                    <div className="h-4 w-4 rounded-full bg-neutral-900 dark:bg-white" />
-                    <span className="text-sm font-semibold tracking-tight">Clarity UI Docs</span>
-                </div>
-                <nav className="space-y-1">
-                    {["Getting Started", "Installation", "CLI", "Theming"].map((item) => (
-                        <button key={item} className="w-full text-left px-2 py-1.5 text-sm font-medium text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100 rounded-md transition-colors dark:text-neutral-400 dark:hover:text-neutral-100 dark:hover:bg-neutral-800/50">
-                            {item}
-                        </button>
-                    ))}
-                </nav>
-            </aside>
-
-            {/* Main Content */}
-            <main className="flex-1 lg:pl-64">
-                <div className="max-w-3xl mx-auto px-8 py-12 lg:py-24">
-                    <h1 className="text-4xl font-bold mb-6">Documentation</h1>
-                    <p className="text-lg text-neutral-500 mb-8 leading-relaxed">
-                        Welcome to the official documentation for Clarity UI. A modern, minimalist component library built for speed and aesthetics.
-                    </p>
-
-                    <div className="prose prose-neutral dark:prose-invert max-w-none">
-                        <h2>Installation</h2>
-                        <pre className="bg-neutral-100 dark:bg-neutral-900 p-4 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-800">
-                            <code>npx clarityui init</code>
-                        </pre>
-
-                        <h2 className="mt-8">Adding Components</h2>
-                        <p>You can add components to your project using the CLI:</p>
-                        <pre className="bg-neutral-100 dark:bg-neutral-900 p-4 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-800">
-                            <code>npx clarityui add button</code>
-                        </pre>
+        <div className="flex min-h-screen flex-col">
+            <header className="container z-40 bg-background">
+                <div className="flex h-20 items-center justify-between py-6">
+                    <div className="flex gap-6 md:gap-10">
+                        <Link href="/" className="flex items-center space-x-2">
+                            <span className="inline-block font-bold">Clarity UI</span>
+                        </Link>
                     </div>
+                    <nav>
+                        <Link
+                            href="/docs"
+                            className="text-sm font-medium transition-colors hover:text-foreground/80 text-foreground/60"
+                        >
+                            Documentation
+                        </Link>
+                    </nav>
                 </div>
+            </header>
+            <main className="flex-1">
+                <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
+                    <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
+                        <Link
+                            href="https://twitter.com/sh20raj"
+                            className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium"
+                            target="_blank"
+                        >
+                            Follow along on Twitter
+                        </Link>
+                        <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
+                            Build your modern web application.
+                        </h1>
+                        <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+                            Beautifully designed components that you can copy and paste into
+                            your apps. Accessible. Customizable. Open Source.
+                        </p>
+                        <div className="space-x-4">
+                            <Link href="/docs" className="inline-block">
+                                <Button size="lg" className="h-11 px-8">
+                                    Get Started
+                                </Button>
+                            </Link>
+                            <Link
+                                href="https://github.com/sh20raj/clarity-ui"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="inline-block"
+                            >
+                                <Button variant="outline" size="lg" className="h-11 px-8">
+                                    <Github className="mr-2 h-4 w-4" />
+                                    GitHub
+                                </Button>
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
+                <section
+                    id="features"
+                    className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
+                >
+                    <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
+                        <div className="relative overflow-hidden rounded-lg border bg-background p-2">
+                            <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
+                                <Zap className="h-12 w-12 text-primary" />
+                                <div className="space-y-2">
+                                    <h3 className="font-bold">Fast & Performance</h3>
+                                    <p className="text-sm text-muted-foreground">
+                                        Built on top of Radix UI for uncompromised performance and accessibility.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="relative overflow-hidden rounded-lg border bg-background p-2">
+                            <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
+                                <Layout className="h-12 w-12 text-primary" />
+                                <div className="space-y-2">
+                                    <h3 className="font-bold">Flexible Layouts</h3>
+                                    <p className="text-sm text-muted-foreground">
+                                        Responsive components that adapt to any screen size automatically.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="relative overflow-hidden rounded-lg border bg-background p-2">
+                            <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
+                                <FileCode className="h-12 w-12 text-primary" />
+                                <div className="space-y-2">
+                                    <h3 className="font-bold">Copy & Paste</h3>
+                                    <p className="text-sm text-muted-foreground">
+                                        Every component is independent. Copy what you need, leave the rest.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
     );

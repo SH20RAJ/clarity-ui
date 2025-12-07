@@ -10,18 +10,28 @@
     },
     "dependencies": {
         "clarityui": "*",
+        "clsx": "^2.1.1",
+        "framer-motion": "^12.23.25",
+        "gray-matter": "^4.0.3",
+        "lucide-react": "^0.556.0",
         "next": "14.1.0",
+        "next-mdx-remote": "^5.0.0",
+        "next-themes": "^0.4.6",
         "react": "^18.3.1",
-        "react-dom": "^18.3.1"
+        "react-dom": "^18.3.1",
+        "rehype-autolink-headings": "^7.1.0",
+        "rehype-slug": "^6.0.0",
+        "shiki": "^3.19.0",
+        "tailwind-merge": "^3.4.0"
     },
     "devDependencies": {
-        "@tailwindcss/postcss": "^4.0.0",
         "@types/node": "^20.11.24",
         "@types/react": "^18.3.1",
         "@types/react-dom": "^18.3.1",
         "autoprefixer": "^10.4.22",
         "postcss": "^8.5.6",
         "tailwindcss": "3",
+        "tailwindcss-animate": "^1.0.7",
         "typescript": "^5.3.3"
     }
 }
