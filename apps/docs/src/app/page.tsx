@@ -4,24 +4,7 @@ import { ArrowRight, Github, Zap, Layout, FileCode } from "lucide-react";
 
 export default function Home() {
     return (
-        <div className="flex min-h-screen flex-col">
-            <header className="container z-40 bg-background">
-                <div className="flex h-20 items-center justify-between py-6">
-                    <div className="flex gap-6 md:gap-10">
-                        <Link href="/" className="flex items-center space-x-2">
-                            <span className="inline-block font-bold">Clarity UI</span>
-                        </Link>
-                    </div>
-                    <nav>
-                        <Link
-                            href="/docs"
-                            className="text-sm font-medium transition-colors hover:text-foreground/80 text-foreground/60"
-                        >
-                            Documentation
-                        </Link>
-                    </nav>
-                </div>
-            </header>
+        <div className="flex min-h-[calc(100vh-3.5rem)] flex-col">
             <main className="flex-1">
                 <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
                     <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
