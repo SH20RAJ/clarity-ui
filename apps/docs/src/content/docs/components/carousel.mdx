@@ -1,24 +1,46 @@
 ---
 title: Carousel
-description: Carousel component
+description: A carousel with motion and swipe.
 ---
 
 # Carousel
 
-<ComponentPreview name="Carousel">
-
 ```tsx
-import { Carousel } from "clarityui"
+import * as React from "react"
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
-export function Example() {
-  return <Carousel />
+export function CarouselDemo() {
+  return (
+    <Carousel className="w-full max-w-xs">
+      <CarouselContent>
+        {Array.from({ length: 5 }).map((_, index) => (
+          <CarouselItem key={index}>
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6">
+                  <span className="text-4xl font-semibold">{index + 1}</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+  )
 }
 ```
-
-</ComponentPreview>
 
 ## Installation
 
 ```bash
-npx clarityui add carousel
+npx shadcn@latest add https://clarity-ui.pages.dev/registry/carousel.json
 ```

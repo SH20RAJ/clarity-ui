@@ -4,13 +4,21 @@ import matter from "gray-matter"
 import { MDXRemote } from "next-mdx-remote/rsc"
 import { notFound } from "next/navigation"
 
+import rehypePrettyCode from "rehype-pretty-code"
+import rehypeSlug from "rehype-slug"
+import rehypeAutolinkHeadings from "rehype-autolink-headings"
+
 import * as ClarityUI from "clarityui"
 import { ComponentPreview } from "@/components/component-preview"
+import { ErrorBoundary } from "@/components/ui/error-boundary"
+import { ClientOnly } from "@/components/client-only"
+import { getAllDocsSlugs } from "@/lib/docs"
 
 const components = {
     ...ClarityUI,
     ComponentPreview,
-    // Custom components like Callout, Pre, etc.
+    ErrorBoundary,
+    ClientOnly,
 }
 
 interface PageProps {
@@ -32,8 +40,6 @@ async function getDocFromParams(slug: string[]) {
     }
 }
 
-import { getAllDocsSlugs } from "@/lib/docs"
-
 export async function generateStaticParams() {
     const slugs = getAllDocsSlugs()
     return slugs.map((slug) => ({ slug }))
@@ -51,7 +57,25 @@ export default async function DocPage({ params }: PageProps) {
             <h1>{doc.data.title}</h1>
             <p className="text-xl text-muted-foreground">{doc.data.description}</p>
             <hr />
-            <MDXRemote source={doc.content} components={components as any} />
+            <MDXRemote
+                source={doc.content}
+                components={components as any}
+                options={{
+                    mdxOptions: {
+                        rehypePlugins: [
+                            rehypeSlug,
+                            [rehypeAutolinkHeadings, { behavior: "wrap" }],
+                            [
+                                rehypePrettyCode,
+                                {
+                                    theme: "github-dark",
+                                    keepBackground: false,
+                                },
+                            ],
+                        ],
+                    },
+                }}
+            />
         </article>
     )
 }
