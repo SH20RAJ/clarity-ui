@@ -22,9 +22,9 @@ export function DocsSidebar() {
                                     key={item.href}
                                     href={item.href}
                                     className={cn(
-                                        "group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline text-muted-foreground",
+                                        "group flex w-full items-center rounded-md border border-transparent px-2 py-1 text-muted-foreground hover:bg-muted/50 hover:text-foreground",
                                         pathname === item.href
-                                            ? "font-medium text-foreground"
+                                            ? "bg-muted font-medium text-foreground"
                                             : "text-muted-foreground"
                                     )}
                                 >

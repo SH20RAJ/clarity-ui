@@ -11,6 +11,7 @@
     "dependencies": {
         "clarityui": "*",
         "clsx": "^2.1.1",
+        "cmdk": "^1.1.1",
         "framer-motion": "^12.23.25",
         "gray-matter": "^4.0.3",
         "lucide-react": "^0.556.0",

@@ -5,6 +5,7 @@ import { Button } from "clarityui"
 import { ModeToggle } from "@/components/mode-toggle"
 import { docsConfig } from "@/config/docs"
 import { cn } from "@/lib/utils"
+import { CommandMenu } from "@/components/command-menu"
 
 export function SiteHeader() {
     return (
@@ -37,11 +38,11 @@ export function SiteHeader() {
                         </Link>
                     </nav>
                 </div>
-                <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+                <div className="flex pl-16 flex-1 items-center justify-between space-x-2 md:justify-end">
                     <div className="w-full flex-1 md:w-auto md:flex-none">
-                        {/* Search (future) */}
+                        <CommandMenu />
                     </div>
-                    <nav className="flex items-center gap-2">
+                    <nav className="flex items-center">
                         <Link
                             href={siteConfig.links.github}
                             target="_blank"
