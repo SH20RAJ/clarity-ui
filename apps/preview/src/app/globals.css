@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Inter", sans-serif;
+    --radius: 0.5rem;
+}
+
+/* Import UI Library Variables if needed, or rely on the imported CSS from package */
+/* Actually, best to just import the dist CSS in layout and here just have app specific stuff */
+
+:root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+}
+
+.dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+}

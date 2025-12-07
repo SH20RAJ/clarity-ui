@@ -1,0 +1,19 @@
+{
+    "name": "clarity-ui-monorepo",
+    "private": true,
+    "scripts": {
+        "build": "bun x turbo run build",
+        "dev": "bun x turbo run dev",
+        "lint": "bun x turbo run lint",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    },
+    "devDependencies": {
+        "prettier": "^3.2.5",
+        "turbo": "^1.12.4",
+        "typescript": "^5.4.2"
+    },
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ]
+}

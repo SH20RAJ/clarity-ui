@@ -1,0 +1,34 @@
+{
+    "name": "clarityui",
+    "version": "0.0.1",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "tsup",
+        "dev": "tsup --watch",
+        "lint": "eslint src/",
+        "clean": "rm -rf dist"
+    },
+    "peerDependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "tailwindcss": "^4.0.0"
+    },
+    "dependencies": {
+        "@radix-ui/react-slot": "^1.1.1",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "lucide-react": "^0.470.0",
+        "tailwind-merge": "^2.6.0",
+        "tailwindcss-animate": "^1.0.7"
+    },
+    "devDependencies": {
+        "@tsconfig/node18": "^18.2.6",
+        "@types/react": "^18.3.1",
+        "@types/react-dom": "^18.3.1",
+        "tailwindcss": "^4.0.0",
+        "tsup": "^8.3.5",
+        "typescript": "^5.7.2"
+    }
+}

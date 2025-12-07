@@ -1,0 +1,24 @@
+{
+    "name": "@clarity-ui/registry",
+    "version": "0.0.1",
+    "main": "index.json",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "build": "tsx src/build.ts",
+        "dev": "tsx watch src/build.ts"
+    },
+    "dependencies": {
+        "fs-extra": "^11.2.0",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^11.0.4",
+        "@types/node": "^20.11.24",
+        "tsx": "^4.7.1",
+        "typescript": "^5.3.3"
+    },
+    "files": [
+        "index.json"
+    ]
+}

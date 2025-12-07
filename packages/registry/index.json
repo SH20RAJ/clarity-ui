@@ -1,0 +1,19 @@
+{
+    "button": {
+        "name": "button",
+        "version": "1.0.0",
+        "type": "components:ui",
+        "files": [
+            {
+                "path": "ui/src/components/button.tsx",
+                "type": "components:ui",
+                "target": "components/ui/button.tsx"
+            }
+        ],
+        "dependencies": [
+            "@radix-ui/react-slot",
+            "class-variance-authority"
+        ],
+        "preview": "/preview/button"
+    }
+}
