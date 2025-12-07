@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 
-const componentsDir = path.join(process.cwd(), "packages/ui/src/components/ui")
+const componentsDir = path.join(process.cwd(), "../../packages/ui/src/components/ui")
 const docsDir = path.join(process.cwd(), "src/content/docs/components")
 
 if (!fs.existsSync(docsDir)) {

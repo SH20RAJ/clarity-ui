@@ -1,0 +1,33 @@
+---
+title: Toggle Group
+description: Toggle Group component
+---
+
+# Toggle Group
+
+```tsx
+import { ToggleGroup, ToggleGroupItem } from "clarityui"
+import { Bold, Italic, Underline } from "lucide-react"
+
+export function Example() {
+  return (
+    <ToggleGroup type="multiple">
+      <ToggleGroupItem value="bold" aria-label="Toggle bold">
+        <Bold className="h-4 w-4" />
+      </ToggleGroupItem>
+      <ToggleGroupItem value="italic" aria-label="Toggle italic">
+        <Italic className="h-4 w-4" />
+      </ToggleGroupItem>
+      <ToggleGroupItem value="underline" aria-label="Toggle underline">
+        <Underline className="h-4 w-4" />
+      </ToggleGroupItem>
+    </ToggleGroup>
+  )
+}
+```
+
+## Installation
+
+```bash
+npx clarityui add toggle-group
+```

@@ -38,6 +38,8 @@ export const metadata: Metadata = {
     },
 };
 
+import { TooltipProvider } from "clarityui"
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -52,10 +54,12 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <div className="relative flex min-h-screen flex-col bg-background">
-                        <SiteHeader />
-                        <main className="flex-1">{children}</main>
-                    </div>
+                    <TooltipProvider>
+                        <div className="relative flex min-h-screen flex-col bg-background">
+                            <SiteHeader />
+                            <main className="flex-1">{children}</main>
+                        </div>
+                    </TooltipProvider>
                 </ThemeProvider>
             </body>
         </html>
