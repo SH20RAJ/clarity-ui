@@ -1,0 +1,14 @@
+{
+  "name": "menubar",
+  "type": "registry:ui",
+  "dependencies": [
+    "@radix-ui/react-menubar"
+  ],
+  "files": [
+    {
+      "path": "ui/menubar.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/menubar.tsx"
+    }
+  ]
+}

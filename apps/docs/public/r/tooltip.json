@@ -1,0 +1,14 @@
+{
+  "name": "tooltip",
+  "type": "registry:ui",
+  "dependencies": [
+    "@radix-ui/react-tooltip"
+  ],
+  "files": [
+    {
+      "path": "ui/tooltip.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/tooltip.tsx"
+    }
+  ]
+}

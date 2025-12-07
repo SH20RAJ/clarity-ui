@@ -1,0 +1,14 @@
+{
+  "name": "carousel",
+  "type": "registry:ui",
+  "dependencies": [
+    "embla-carousel-react"
+  ],
+  "files": [
+    {
+      "path": "ui/carousel.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/carousel.tsx"
+    }
+  ]
+}

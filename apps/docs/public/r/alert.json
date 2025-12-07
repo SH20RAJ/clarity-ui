@@ -1,0 +1,18 @@
+{
+  "name": "alert",
+  "type": "registry:ui",
+  "roles": [
+    "alert"
+  ],
+  "dependencies": [
+    "class-variance-authority",
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "ui/alert.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/alert.tsx"
+    }
+  ]
+}

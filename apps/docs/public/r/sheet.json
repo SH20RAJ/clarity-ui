@@ -1,0 +1,14 @@
+{
+  "name": "sheet",
+  "type": "registry:ui",
+  "dependencies": [
+    "@radix-ui/react-dialog"
+  ],
+  "files": [
+    {
+      "path": "ui/sheet.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/sheet.tsx"
+    }
+  ]
+}

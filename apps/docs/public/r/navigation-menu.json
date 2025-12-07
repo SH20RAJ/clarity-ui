@@ -1,0 +1,14 @@
+{
+  "name": "navigation-menu",
+  "type": "registry:ui",
+  "dependencies": [
+    "@radix-ui/react-navigation-menu"
+  ],
+  "files": [
+    {
+      "path": "ui/navigation-menu.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/navigation-menu.tsx"
+    }
+  ]
+}
