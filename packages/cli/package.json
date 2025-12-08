@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "CLI for Clarity UI",
     "bin": {
-        "clarity-ui": "./dist/index.js"
+        "clarityui": "./dist/index.js"
     },
     "scripts": {
         "build": "tsup",
