@@ -27,10 +27,6 @@ export const metadata: Metadata = {
         },
     ],
     creator: "sh20raj",
-    themeColor: [
-        { media: "(prefers-color-scheme: light)", color: "white" },
-        { media: "(prefers-color-scheme: dark)", color: "black" },
-    ],
     icons: {
         icon: "/favicon.png",
         shortcut: "/favicon.png",
@@ -38,6 +34,13 @@ export const metadata: Metadata = {
     },
     manifest: "/manifest.json",
 };
+
+export const viewport = {
+    themeColor: [
+        { media: "(prefers-color-scheme: light)", color: "white" },
+        { media: "(prefers-color-scheme: dark)", color: "black" },
+    ],
+}
 
 import { TooltipProvider } from "clarityui"
 
