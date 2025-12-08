@@ -12,6 +12,8 @@ interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
 
 import * as ClarityUI from "clarityui"
 
+import { Examples } from "@/components/examples"
+
 export function ComponentPreview({
     name,
     children,
@@ -20,10 +22,9 @@ export function ComponentPreview({
     ...props
 }: ComponentPreviewProps) {
 
-    // Dynamically access component from library
-    // In real app, we might need a map or passed component
-    // For now, we assume names match export
-    const Component = (ClarityUI as any)[name]
+    // 1. Try Examples map
+    // 2. Try ClarityUI export
+    const Component = Examples[name] || (ClarityUI as any)[name]
 
     return (
         <div
