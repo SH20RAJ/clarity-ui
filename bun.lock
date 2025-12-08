@@ -48,6 +48,7 @@
         "embla-carousel-react": "^8.6.0",
         "framer-motion": "^12.23.25",
         "gray-matter": "^4.0.3",
+        "input-otp": "^1.4.2",
         "lucide-react": "^0.556.0",
         "next": "14.1.0",
         "next-mdx-remote": "^5.0.0",
@@ -106,7 +107,7 @@
       },
     },
     "packages/cli": {
-      "name": "clarity-ui-web-cli",
+      "name": "clarityui-cli",
       "version": "0.0.1",
       "bin": {
         "clarityui": "./dist/index.mjs",
@@ -993,9 +994,9 @@
 
     "chokidar": ["chokidar@4.0.3", "", { "dependencies": { "readdirp": "^4.0.1" } }, "sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA=="],
 
-    "clarity-ui-web-cli": ["clarity-ui-web-cli@workspace:packages/cli"],
-
     "clarityui": ["clarityui@workspace:packages/ui"],
+
+    "clarityui-cli": ["clarityui-cli@workspace:packages/cli"],
 
     "class-variance-authority": ["class-variance-authority@0.7.1", "", { "dependencies": { "clsx": "^2.1.1" } }, "sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg=="],
 
@@ -1306,6 +1307,8 @@
     "inherits": ["inherits@2.0.4", "", {}, "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ=="],
 
     "inline-style-parser": ["inline-style-parser@0.2.7", "", {}, "sha512-Nb2ctOyNR8DqQoR0OwRG95uNWIC0C1lCgf5Naz5H6Ji72KZ8OcFZLz2P5sNgwlyoJ8Yif11oMuYs5pBQa86csA=="],
+
+    "input-otp": ["input-otp@1.4.2", "", { "peerDependencies": { "react": "^16.8 || ^17.0 || ^18.0 || ^19.0.0 || ^19.0.0-rc", "react-dom": "^16.8 || ^17.0 || ^18.0 || ^19.0.0 || ^19.0.0-rc" } }, "sha512-l3jWwYNvrEa6NTCt7BECfCm48GvwuZzkoeG3gBL2w4CHeOXW3eKFmf9UNYkNfYc3mxMrthMnxjIE07MT0zLBQA=="],
 
     "install": ["install@0.10.4", "", {}, "sha512-+IRyOastuPmLVx9zlVXJoKErSqz1Ma5at9A7S8yfsj3W+Kg95faPoh3bPDtMrZ/grz4PRmXzrswmlzfLlYyLOw=="],
 

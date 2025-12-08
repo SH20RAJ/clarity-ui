@@ -36,6 +36,15 @@ export function SiteHeader() {
                         >
                             Components
                         </Link>
+                        <Link
+                            href="/blocks"
+                            className={cn(
+                                "transition-colors hover:text-foreground/80",
+                                "text-foreground/60"
+                            )}
+                        >
+                            Blocks
+                        </Link>
                     </nav>
                 </div>
                 <div className="flex pl-16 flex-1 items-center justify-between space-x-2 md:justify-end">
