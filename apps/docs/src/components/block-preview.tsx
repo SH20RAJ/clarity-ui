@@ -35,8 +35,8 @@ export function BlockPreview({
     }[view]
 
     return (
-        <div className="group relative rounded-xl border bg-background shadow-sm overflow-hidden">
-            <div className="flex items-center justify-between border-b bg-muted/20 px-4 py-2">
+        <div className="group relative rounded-xl border bg-background overflow-hidden">
+            <div className="flex items-center justify-between border-b px-4 py-2">
                 <div className="flex items-center gap-2">
                     <div className="text-sm font-medium text-muted-foreground">{name}</div>
                 </div>

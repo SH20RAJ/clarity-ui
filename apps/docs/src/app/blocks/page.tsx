@@ -3,7 +3,7 @@ import { BlocksGallery } from "@/components/blocks-gallery"
 
 export const metadata: Metadata = {
     title: "Blocks",
-    dion: "Beautifully designed, ready-to-use building blocks for your next project.",
+    description: "Beautifully designed, ready-to-use building blocks for your next project.",
 }
 
 export default function BlocksPage() {

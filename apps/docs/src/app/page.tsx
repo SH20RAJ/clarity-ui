@@ -50,7 +50,7 @@ export default function IndexPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Card 1: Large */}
-                    <div className="col-span-1 md:col-span-2 lg:col-span-2 relative overflow-hidden rounded-3xl border bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-950 p-8 sm:p-12">
+                    <div className="col-span-1 md:col-span-2 lg:col-span-2 relative overflow-hidden rounded-2xl border bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-950 p-8 sm:p-12">
                         <div className="space-y-4 max-w-lg relative z-10">
                             <h3 className="text-3xl font-bold tracking-tight">Engineered for focus.</h3>
                             <p className="text-muted-foreground text-lg">
@@ -65,7 +65,7 @@ export default function IndexPage() {
                     </div>
 
                     {/* Card 2: Tall */}
-                    <div className="col-span-1 relative overflow-hidden rounded-3xl border bg-background p-8">
+                    <div className="col-span-1 relative overflow-hidden rounded-2xl border bg-background p-8">
                         <div className="h-full flex flex-col justify-between">
                             <div className="flex items-center justify-center py-12">
                                 <div className="relative">
@@ -83,7 +83,7 @@ export default function IndexPage() {
                     </div>
 
                     {/* Card 3 */}
-                    <div className="col-span-1 relative overflow-hidden rounded-3xl border bg-background p-8">
+                    <div className="col-span-1 relative overflow-hidden rounded-2xl border bg-background p-8">
                         <div className="space-y-2">
                             <MousePointer2 className="h-8 w-8 text-primary mb-4" />
                             <h3 className="text-xl font-bold">Micro-interactions</h3>
@@ -94,7 +94,7 @@ export default function IndexPage() {
                     </div>
 
                     {/* Card 4: Wide */}
-                    <div className="col-span-1 md:col-span-2 relative overflow-hidden rounded-3xl border bg-zinc-950 text-zinc-50 p-8 sm:p-12">
+                    <div className="col-span-1 md:col-span-2 relative overflow-hidden rounded-2xl border bg-zinc-950 text-zinc-50 p-8 sm:p-12">
                         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                             <div className="space-y-4">
                                 <h3 className="text-2xl font-bold">Open Source & Free</h3>

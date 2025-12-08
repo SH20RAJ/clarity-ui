@@ -19,6 +19,14 @@ import { DropdownMenuDemo } from "./dropdown-menu-demo"
 import { HoverCardDemo } from "./hover-card-demo"
 import { InputDemo } from "./input-demo"
 import { LabelDemo } from "./label-demo"
+import { ScrollAreaDemo } from "./scroll-area-demo"
+import { SheetDemo } from "./sheet-demo"
+import { SelectDemo } from "./select-demo"
+import { TabsDemo } from "./tabs-demo"
+import { TableDemo } from "./table-demo"
+import { TooltipDemo } from "./tooltip-demo"
+import { PopoverDemo } from "./popover-demo"
+import { SonnerDemo } from "./sonner-demo"
 
 export const Examples: Record<string, React.ComponentType<any>> = {
     ButtonDemo,
@@ -42,4 +50,12 @@ export const Examples: Record<string, React.ComponentType<any>> = {
     HoverCardDemo,
     InputDemo,
     LabelDemo,
+    ScrollAreaDemo,
+    SheetDemo,
+    SelectDemo,
+    TabsDemo,
+    TableDemo,
+    TooltipDemo,
+    PopoverDemo,
+    SonnerDemo,
 }
