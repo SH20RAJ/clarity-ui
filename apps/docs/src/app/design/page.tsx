@@ -77,8 +77,11 @@ export default function DesignSystemPage() {
                     </div>
                     <p className="text-xs text-muted-foreground">* Note: This is an approximation. We use standard Tailwind Zinc.</p>
                 </div>
-
-                <div className="space-y-8">
+                <p className="text-lg text-muted-foreground">
+                    Clarity UI is built on a foundation of simplicity, accessibility, and visual harmony.
+                    Our core philosophy is <span className="font-bold text-foreground">*MINIMAL</span>.
+                    We believe in:
+                </p>        <div className="space-y-8">
                     <h3 className="text-lg font-semibold">Semantic Tokens</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                         <div className="space-y-2">

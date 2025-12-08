@@ -1,5 +1,5 @@
 {
-    "name": "clarity-ui-web-cli",
+    "name": "clarityui-cli",
     "version": "0.0.1",
     "description": "CLI for Clarity UI",
     "bin": {

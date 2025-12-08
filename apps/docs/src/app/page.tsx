@@ -16,13 +16,13 @@ export default function IndexPage() {
                     <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
                 </Link>
 
-                <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter text-foreground max-w-4xl">
-                    Clarity <span className="text-muted-foreground">in every pixel.</span>
+                <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1]">
+                    Minimal. Clean. <br className="hidden sm:inline" />
+                    Accessible. Visually Appealing.
                 </h1>
-
-                <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8 font-light">
-                    A design system tailored for high-end web applications.
-                    Obsessively crafted details. Unmatched performance.
+                <p className="max-w-[750px] text-lg text-muted-foreground sm:text-2xl">
+                    UI Components with Ease. Built for speed and consistency. <br />
+                    <span className="font-semibold text-foreground">*MINIMAL</span> is our core philosophy.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
