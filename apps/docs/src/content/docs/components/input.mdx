@@ -5,13 +5,15 @@ description: Input component
 
 # Input
 
-<ComponentPreview name="Input">
+<ComponentPreview name="InputDemo">
 
 ```tsx
-import { Input } from "clarityui"
+"use client"
 
-export function Example() {
-  return <Input />
+import { Input } from "@/components/ui/input"
+
+export function InputDemo() {
+  return <Input type="email" placeholder="Email" />
 }
 ```
 

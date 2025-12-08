@@ -5,13 +5,26 @@ description: Calendar component
 
 # Calendar
 
-<ComponentPreview name="Calendar">
+<ComponentPreview name="CalendarDemo">
 
 ```tsx
-import { Calendar } from "clarityui"
+"use client"
 
-export function Example() {
-  return <Calendar />
+import * as React from "react"
+
+import { Calendar } from "@/components/ui/calendar"
+
+export function CalendarDemo() {
+  const [date, setDate] = React.useState<Date | undefined>(new Date())
+
+  return (
+    <Calendar
+      mode="single"
+      selected={date}
+      onSelect={setDate}
+      className="rounded-md border"
+    />
+  )
 }
 ```
 

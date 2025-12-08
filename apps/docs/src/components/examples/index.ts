@@ -7,6 +7,18 @@ import { AccordionDemo } from "./accordion-demo"
 import { AvatarDemo } from "./avatar-demo"
 import { BadgeDemo } from "./badge-demo"
 import { CardDemo } from "./card-demo"
+import { AlertDialogDemo } from "./alert-dialog-demo"
+import { AspectRatioDemo } from "./aspect-ratio-demo"
+import { CalendarDemo } from "./calendar-demo"
+import { CheckboxDemo } from "./checkbox-demo"
+import { CommandDemo } from "./command-demo"
+import { ContextMenuDemo } from "./context-menu-demo"
+import { DialogDemo } from "./dialog-demo"
+import { DrawerDemo } from "./drawer-demo"
+import { DropdownMenuDemo } from "./dropdown-menu-demo"
+import { HoverCardDemo } from "./hover-card-demo"
+import { InputDemo } from "./input-demo"
+import { LabelDemo } from "./label-demo"
 
 export const Examples: Record<string, React.ComponentType<any>> = {
     ButtonDemo,
@@ -18,4 +30,16 @@ export const Examples: Record<string, React.ComponentType<any>> = {
     AvatarDemo,
     BadgeDemo,
     CardDemo,
+    AlertDialogDemo,
+    AspectRatioDemo,
+    CalendarDemo,
+    CheckboxDemo,
+    CommandDemo,
+    ContextMenuDemo,
+    DialogDemo,
+    DrawerDemo,
+    DropdownMenuDemo,
+    HoverCardDemo,
+    InputDemo,
+    LabelDemo,
 }

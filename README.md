@@ -1,7 +1,7 @@
 # Clarity UI
 
-![NPM Version](https://img.shields.io/npm/v/clarityui?logo=npm)
-![License](https://img.shields.io/npm/l/clarityui)
+![NPM Version](https://img.shields.io/npm/v/clarity-ui-web-cli?logo=npm)
+![License](https://img.shields.io/npm/l/clarity-ui-web-cli)
 ![Build Status](https://github.com/sh20raj/clarity-ui/actions/workflows/ci.yml/badge.svg)
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fsh20raj%2Fclarity-ui&countColor=%23263759)
 
@@ -18,24 +18,24 @@ Clean, modern, and accessible React components for building high-quality web app
 
 ## Installation
 
-You can install components using the standard `shadcn` CLI, pointing to our registry.
+You can install components using our CLI or the standard `shadcn` CLI.
 
+**Clarity CLI:**
 ```bash
-npx shadcn@latest add https://clarity-ui-preview.pages.dev/r/button.json
+npx clarity-ui-web-cli add button
 ```
 
-Or install the core package if you prefer a traditional library approach:
-
+**Shadcn CLI:**
 ```bash
-npm install clarityui
+npx shadcn@latest add https://clarity-ui.pages.dev/r/button.json
 ```
 
 ## Usage
 
-Import components directly from the package:
+After adding a component, import it from your local logic:
 
 ```tsx
-import { Button } from "clarityui";
+import { Button } from "@/components/ui/button";
 
 export default function App() {
   return (
