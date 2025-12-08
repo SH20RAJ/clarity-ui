@@ -1,115 +1,131 @@
 import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { Button } from "clarityui"
-import { ArrowRight, Check, Command, Copy, Moon, Smartphone, Zap } from "lucide-react"
+import { ArrowRight, Copy, Terminal, Layout, MousePointer2 } from "lucide-react"
 
 export default function IndexPage() {
     return (
         <div className="flex flex-col min-h-screen">
-            {/* Hero Section */}
-            <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
-                <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
-                    <Link
-                        href="/docs"
-                        className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium"
-                        target="_blank"
-                    >
-                        Follow on Twitter
+
+            {/* Hero: Radical Minimalism. Centered. Big Type. */}
+            <section className="flex flex-col items-center justify-center space-y-10 py-32 md:py-48 lg:py-48 text-center px-4">
+
+                <Link href="/design" className="group flex items-center rounded-full bg-muted/50 px-4 py-1.5 text-sm font-medium transition-colors hover:bg-muted">
+                    <span className="block w-2 h-2 rounded-full bg-primary mr-2 animate-pulse" />
+                    The Design Philosophy
+                    <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
+                </Link>
+
+                <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter text-foreground max-w-4xl">
+                    Clarity <span className="text-muted-foreground">in every pixel.</span>
+                </h1>
+
+                <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8 font-light">
+                    A design system tailored for high-end web applications.
+                    Obsessively crafted details. Unmatched performance.
+                </p>
+
+                <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
+                    <Link href="/docs">
+                        <Button size="lg" className="h-12 px-8 rounded-full text-base">
+                            Get Started
+                        </Button>
                     </Link>
-                    <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-                        Build beautiful apps with <span className="text-primary">Clarity</span>
-                    </h1>
-                    <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-                        A comprehensive component library for modern web development. Minimalistic, accessible, and easy to customize.
-                    </p>
-                    <div className="space-x-4">
-                        <Link href="/docs">
-                            <Button size="lg" className="h-11 px-8">
-                                Get Started
-                            </Button>
-                        </Link>
-                        <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
-                            <Button variant="outline" size="lg" className="h-11 px-8">
-                                GitHub
-                            </Button>
-                        </Link>
+                    <div className="flex items-center gap-2 rounded-full border bg-background px-4 h-12 text-sm font-mono text-muted-foreground">
+                        <span className="text-primary font-bold">{">"}</span>
+                        npx clarityui add button
+                        <Copy className="ml-4 h-4 w-4 cursor-pointer hover:text-foreground transition-colors" />
                     </div>
                 </div>
+
             </section>
 
-            {/* Features Grid */}
-            <section className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24">
-                <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-                    <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">Feature packed</h2>
-                    <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-                        Clarity UI provides everything you need to build standard-compliant, performant web applications.
-                    </p>
-                </div>
-                <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
-                    <FeatureCard
-                        icon={Zap}
-                        title="Fast & Lightweight"
-                        description="Built on primitives that are optimized for performance and bundle size."
-                    />
-                    <FeatureCard
-                        icon={Smartphone}
-                        title="Responsive"
-                        description="Mobile-first design principles ensure your app looks great on any device."
-                    />
-                    <FeatureCard
-                        icon={Moon}
-                        title="Dark Mode"
-                        description="Fully automated dark mode support with next-themes integration."
-                    />
-                    <FeatureCard
-                        icon={Command}
-                        title="Accessible"
-                        description="Follows WAI-ARIA patterns for maximum accessibility."
-                    />
-                    <FeatureCard
-                        icon={Copy}
-                        title="Copy & Paste"
-                        description="Simply copy component code or use the CLI to add to your project."
-                    />
-                    <FeatureCard
-                        icon={Check}
-                        title="Type Safe"
-                        description="Written in TypeScript with complete type definitions included."
-                    />
-                </div>
-            </section>
-
-            {/* CLI Section */}
-            <section className="container py-8 md:py-12 lg:py-24">
-                <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
-                    <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
-                        Install via CLI
-                    </h2>
-                    <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-                        Add components to your project with a single command.
-                    </p>
-                    <div className="w-full max-w-2xl rounded-lg border bg-zinc-950 px-6 py-4 text-left shadow-sm">
-                        <code className="relative font-mono text-sm flex items-center justify-between text-zinc-50">
-                            <span className="break-all">npx shadcn@latest add https://clarity-ui.pages.dev/r/button.json</span>
-                        </code>
-                    </div>
-                </div>
-            </section>
-
-        </div>
-    )
-}
-
-function FeatureCard({ icon: Icon, title, description }: { icon: any, title: string, description: string }) {
-    return (
-        <div className="relative overflow-hidden rounded-lg border bg-background p-2">
-            <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-                <Icon className="h-12 w-12 text-primary" />
-                <div className="space-y-2">
-                    <h3 className="font-bold">{title}</h3>
-                    <p className="text-sm text-muted-foreground">{description}</p>
-                </div>
+            {/* Visual Break / Divider */}
+            <div className="container max-w-6xl">
+                <hr className="border-border/40" />
             </div>
+
+            {/* Bento Grid / Feature Section */}
+            <section className="container max-w-6xl py-24 space-y-24">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {/* Card 1: Large */}
+                    <div className="col-span-1 md:col-span-2 lg:col-span-2 relative overflow-hidden rounded-3xl border bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-950 p-8 sm:p-12">
+                        <div className="space-y-4 max-w-lg relative z-10">
+                            <h3 className="text-3xl font-bold tracking-tight">Engineered for focus.</h3>
+                            <p className="text-muted-foreground text-lg">
+                                Every component is designed to behave predictably. No layout shifts. No console warnings.
+                                Just pure, type-safe React code.
+                            </p>
+                        </div>
+                        {/* Abstract visual decoration */}
+                        <div className="absolute right-0 bottom-0 opacity-20 transform translate-x-1/4 translate-y-1/4">
+                            <Layout size={300} strokeWidth={0.5} />
+                        </div>
+                    </div>
+
+                    {/* Card 2: Tall */}
+                    <div className="col-span-1 relative overflow-hidden rounded-3xl border bg-background p-8">
+                        <div className="h-full flex flex-col justify-between">
+                            <div className="flex items-center justify-center py-12">
+                                <div className="relative">
+                                    <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
+                                    <Terminal size={64} className="relative z-10 text-primary" />
+                                </div>
+                            </div>
+                            <div className="space-y-2">
+                                <h3 className="text-xl font-bold">CLI First</h3>
+                                <p className="text-sm text-muted-foreground">
+                                    Update, add, and manage components directly from your terminal. Use <code className="bg-muted px-1 py-0.5 rounded">npx clarityui</code>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Card 3 */}
+                    <div className="col-span-1 relative overflow-hidden rounded-3xl border bg-background p-8">
+                        <div className="space-y-2">
+                            <MousePointer2 className="h-8 w-8 text-primary mb-4" />
+                            <h3 className="text-xl font-bold">Micro-interactions</h3>
+                            <p className="text-sm text-muted-foreground">
+                                Subtle hover states and click effects that feel "premium" without feeling slightly slow.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Card 4: Wide */}
+                    <div className="col-span-1 md:col-span-2 relative overflow-hidden rounded-3xl border bg-zinc-950 text-zinc-50 p-8 sm:p-12">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                            <div className="space-y-4">
+                                <h3 className="text-2xl font-bold">Open Source & Free</h3>
+                                <p className="text-zinc-400">
+                                    MIT Licensed. Use it for personal projects, commercial dashboards, or anything in between.
+                                </p>
+                            </div>
+                            <Link href={siteConfig.links.github} target="_blank">
+                                <Button variant="secondary" size="lg" className="rounded-full">
+                                    Star on GitHub
+                                </Button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            {/* Footer / CTA */}
+            <section className="container max-w-4xl py-24 text-center border-t border-border/40">
+                <h2 className="text-3xl font-bold tracking-tight mb-6">Stop building from scratch.</h2>
+                <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
+                    Join thousands of developers who are shipping faster with clarity.
+                    The best layout primitives, simpler than ever.
+                </p>
+                <Link href="/docs">
+                    <Button size="lg" className="rounded-full h-14 px-10 text-lg">
+                        Start Building
+                    </Button>
+                </Link>
+            </section>
         </div>
     )
 }
