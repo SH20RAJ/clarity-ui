@@ -1,9 +1,12 @@
 {
-    "name": "@clarity-ui/cli",
+    "name": "clarity-ui-web-cli",
     "version": "0.0.1",
     "description": "CLI for Clarity UI",
     "bin": {
-        "clarityui": "./dist/index.js"
+        "clarityui": "./dist/index.mjs"
+    },
+    "publishConfig": {
+        "access": "public"
     },
     "scripts": {
         "build": "tsup",
